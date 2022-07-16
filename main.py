@@ -30,20 +30,20 @@ class Teacher(Information):
         print("Major = " + Complement.Major)
         print("Teaching Year= " + Complement.Year)
 
+def input_from():
+    Name_Input =  input("Input your Name = ")
+    Position_Input = input("Input your position in this academic = ")
+    Identitynumber_Input = input("Input your academic identity number = ")
+    Major_Input = input("Input your major = ")
+    Year_Input = input("Input your year = ")
+    if Position_Input == "teacher" or Position_Input == "Teacher":
+        result = Teacher(Name_Input,Position_Input,Identitynumber_Input,Major_Input,Year_Input)
+        result.Instrument()
+    elif Position_Input == "student" or Position_Input == "Student":
+        result = Student(Name_Input,Position_Input,Identitynumber_Input,Major_Input,Year_Input)
+        result.Instrument()
+    else :
+        print("ERROR // re-input and check your types ")
 
-Name_Input =  input("Input your Name = ")
-Position_Input = input("Input your position in this academic = ")
-Identitynumber_Input = input("Input your academic identity number = ")
-Major_Input = input("Input your major = ")
-Year_Input = input("Input your year = ")
 
-
-if Position_Input == "teacher" or Position_Input == "Teacher":
-    result = Teacher(Name_Input,Position_Input,Identitynumber_Input,Major_Input,Year_Input)
-    result.Instrument()
-elif Position_Input == "student" or Position_Input == "Student":
-    result = Student(Name_Input,Position_Input,Identitynumber_Input,Major_Input,Year_Input)
-    result.Instrument()
-else :
-    print("ERROR // re-input and check your types ")
-    
+input_from()
